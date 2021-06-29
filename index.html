@@ -10,7 +10,7 @@
   </head>
   <body>
     <div id="flex-atas">
-      <form name="cal">
+      <form id="form" name="cal">
         <h1>Calculator</h1>
         <input id="input" type="text" name="display" /><br /><br />
         <input type="text" value="9" onclick="cal.display.value+='9'" />
@@ -37,7 +37,7 @@
           onclick="cal.display.value=eval(cal.display.value)"
         /><br />
       </form>
-      <div id="blanja">
+      <form id="blanja">
         <h1>Discount Harga</h1>
         <label for="harga-barang">Harga-barang :</label><br />
         <input class="persen" placeholder="Rp.50.000 Ketik 50000" id="price" />
@@ -53,7 +53,7 @@
         <input class="persen" readonly id="total" /><br />
         <label>Potongan harga sebesar :</label>
         <input class="persen" readonly id="total1" />
-      </div>
+      </form>
     </div>
     <div class="bar">
       <div id="waktu">
