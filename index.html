@@ -37,7 +37,7 @@
           onclick="cal.display.value=eval(cal.display.value)"
         /><br />
       </form>
-      <form id="blanja">
+      <div id="blanja">
         <h1>Discount Harga</h1>
         <label for="harga-barang">Harga-barang :</label><br />
         <input class="persen" placeholder="Rp.50.000 Ketik 50000" id="price" />
@@ -50,10 +50,10 @@
         /><br />
         <button onclick="getPrice()">Cek Harga</button>
         <br /><label>Harga yang harus dibayar :</label>
-        <input class="persen" readonly id="total" /><br />
+        <input class="persen" id="total" /><br />
         <label>Potongan harga sebesar :</label>
-        <input class="persen" readonly id="total1" />
-      </form>
+        <input class="persen" id="total1" />
+      </div>
     </div>
     <div class="bar">
       <div id="waktu">
@@ -67,81 +67,173 @@
         <b><p id="Detik"></p></b>
       </div>
     </div>
-    <div id="luas-bangun-datar">
-      <h1>Luas Bangun Datar</h1>
-      <label for="panjang">Panjang :</label>
-      <input class="panjang" id="p" />
-      <label>Lebar :</label>
-      <input class="panjang" id="l" />
-      <label>Jari-jari :</label>
-      <input class="panjang" id="j" />
-      <label>Diameter :</label>
-      <input class="panjang" id="d" />
-      <label for="panjang">Diagonal 1:</label>
-      <input class="panjang" id="d1" />
-      <label>Sisi :</label>
-      <input class="panjang" id="s" />
-      <label>Tinggi :</label>
-      <input class="panjang" id="t" />
-      <label>Diagonal 2 :</label>
-      <input class="panjang" id="d2" />
-      <label>Alas :</label>
-      <input class="panjang" id="a" />
-      <div id="button">
-        <button onclick="getComputedStyle()">Cek Hasil</button>
-      </div>
-      <br />
-      <div id="luas-keliling">
-        <div>
-          <h4>Persegi</h4>
-          <br />
-          <section class="hasil">
-            <div>
-              <label> Luas :</label><br /><input
-                class="bangun"
-                readonly
-                id="luasp"
-              />
-            </div>
-            <div>
-              <label>Keliling :</label><br />
-              <input class="bangun" readonly id="kelilingp" />
-            </div>
-          </section>
+    <div>
+      <h1 id="judul">Luas Bangun Datar</h1>
+      <div id="luas-bangun-datar">
+        <div id="luas-keliling">
+          <div>
+            <h4>Persegi</h4>
+            <br />
+
+            <section class="hasil">
+              <div>
+                <label>Sisi :</label> <br /><input class="bangun" id="s" />
+              </div>
+              <div>
+                <label> Luas :</label><br /><input class="bangun" id="lsp" />
+              </div>
+              <div>
+                <label>Keliling :</label><br />
+                <input class="bangun" id="kelp" />
+              </div>
+            </section>
+          </div>
+          <div>
+            <h4>Persegi Panjang</h4>
+            <br />
+            <section class="hasil">
+              <div>
+                <label for="panjang">Panjang :</label><br />
+                <input class="bangun" id="p" />
+              </div>
+              <div>
+                <label>Lebar :</label><br />
+                <input class="bangun" id="l" />
+              </div>
+              <div>
+                <label> Luas :</label><br /><input class="bangun" id="lpp" />
+              </div>
+              <div>
+                <label>Keliling :</label><br />
+                <input class="bangun" id="kelpp" />
+              </div>
+            </section>
+          </div>
+          <div>
+            <h4>Segitiga</h4>
+            <br />
+            <section class="hasil">
+              <div>
+                <label>Tinggi :</label><br />
+                <input class="bangun" id="t" />
+              </div>
+              <div>
+                <label>Alas :</label><br />
+                <input class="bangun" id="a" />
+              </div>
+              <div>
+                <label>Sisi a :</label><br />
+                <input class="bangun" id="sa" />
+              </div>
+              <div>
+                <label for="panjang">Sisi b :</label><br />
+                <input class="bangun" id="sb" />
+              </div>
+              <div>
+                <label>Sisi c :</label><br />
+                <input class="bangun" id="sc" />
+              </div>
+              <div>
+                <label> Luas :</label><br /><input class="bangun" id="ls" />
+              </div>
+              <div>
+                <label>Keliling :</label><br />
+                <input class="bangun" id="kels" />
+              </div>
+            </section>
+          </div>
         </div>
-        <div>
-          <h4>Persegi Panjang</h4>
-          <br />
-          <section class="hasil">
-            <div>
-              <label> Luas :</label><br /><input
-                class="bangun"
-                readonly
-                id="luaspp"
-              />
-            </div>
-            <div>
-              <label>Keliling :</label><br />
-              <input class="bangun" readonly id="kelilingpp" />
-            </div>
-          </section>
+        <div class="button">
+          <button id="button" onclick="getComputedStyle()">Cek Hasil</button>
         </div>
-        <div>
-          <h4>Segitiga</h4>
-          <br />
-          <section class="hasil">
-            <div>
-              <label> Luas :</label><br /><input
-                class="bangun"
-                readonly
-                id="luass"
-              />
-            </div>
-            <div>
-              <label>Keliling :</label><br />
-              <input class="bangun" readonly id="kelilings" />
-            </div>
-          </section>
+        <br />
+        <div id="luas-keliling">
+          <div>
+            <h4>Persegi</h4>
+            <br />
+            <section class="hasil">
+              <div>
+                <label>Sisi :</label> <br /><input
+                  class="bangun"
+                  readonly
+                  id="sp"
+                />
+              </div>
+              <div>
+                <label> Luas :</label><br /><input
+                  class="bangun"
+                  readonly
+                  id="luasp"
+                />
+              </div>
+              <div>
+                <label>Keliling :</label><br />
+                <input class="bangun" readonly id="kelilingp" />
+              </div>
+            </section>
+          </div>
+          <div>
+            <h4>Persegi Panjang</h4>
+            <br />
+            <section class="hasil">
+              <div>
+                <label for="panjang">Panjang :</label><br />
+                <input class="bangun" readonly id="ppp" />
+              </div>
+              <div>
+                <label>Lebar :</label><br />
+                <input class="bangun" readonly id="lbpp" />
+              </div>
+              <div>
+                <label> Luas :</label><br /><input
+                  class="bangun"
+                  readonly
+                  id="luaspp"
+                />
+              </div>
+              <div>
+                <label>Keliling :</label><br />
+                <input class="bangun" readonly id="kelilingpp" />
+              </div>
+            </section>
+          </div>
+          <div>
+            <h4>Segitiga</h4>
+            <br />
+            <section class="hasil">
+              <div>
+                <label>Tinggi :</label><br />
+                <input class="bangun" id="t" />
+              </div>
+              <div>
+                <label>Alas :</label><br />
+                <input class="bangun" id="a" />
+              </div>
+              <div>
+                <label>Sisi a :</label><br />
+                <input class="bangun" id="sa" />
+              </div>
+              <div>
+                <label for="panjang">Sisi b :</label><br />
+                <input class="bangun" id="sb" />
+              </div>
+              <div>
+                <label>Sisi c :</label><br />
+                <input class="bangun" id="sc" />
+              </div>
+              <div>
+                <label> Luas :</label><br /><input
+                  class="bangun"
+                  readonly
+                  id="luass"
+                />
+              </div>
+              <div>
+                <label>Keliling :</label><br />
+                <input class="bangun" readonly id="kelilings" />
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </div>
