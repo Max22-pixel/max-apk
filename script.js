@@ -26,39 +26,39 @@ document.getElementById("tanggal").innerHTML =
 
 var bulan;
 switch (new Date().getMonth()) {
-  case 1:
+  case 0:
     bulan = "Januari";
     break;
-  case 2:
+  case 1:
     bulan = "Februari";
     break;
-  case 3:
+  case 2:
     bulan = "Maret";
     break;
-  case 4:
+  case 3:
     bulan = "April";
     break;
-  case 5:
+  case 4:
     bulan = "Mei";
     break;
-  case 6:
+  case 5:
     bulan = "Juni";
     break;
-  case 7:
+  case 6:
     bulan = "Juli";
-  case 8:
+  case 7:
     bulan = "Agustus";
     break;
-  case 9:
+  case 8:
     bulan = "September";
     break;
-  case 10:
+  case 9:
     bulan = "Oktober";
     break;
-  case 11:
+  case 10:
     bulan = "November";
     break;
-  case 12:
+  case 11:
     bulan = "Desember";
     break;
 }
